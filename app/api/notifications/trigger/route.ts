@@ -43,26 +43,7 @@ export async function POST(req: Request) {
     }
   }
 
-  // --- SMS via Twilio ---
-  if (
-    phone &&
-    process.env.TWILIO_ACCOUNT_SID &&
-    process.env.TWILIO_ACCOUNT_SID !== "YOUR_TWILIO_ACCOUNT_SID_HERE"
-  ) {
-    try {
-      const twilio = (await import("twilio")).default
-      const client = twilio(process.env.TWILIO_ACCOUNT_SID, process.env.TWILIO_AUTH_TOKEN)
-      await client.messages.create({
-        body: message,
-        from: process.env.TWILIO_PHONE_NUMBER!,
-        to: phone,
-      })
-    } catch (err: any) {
-      errors.push(`SMS: ${err.message}`)
-    }
-  }
-
-  // --- Web Push ---
+// --- Web Push ---
   if (
     pushSub &&
     process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY &&
