@@ -13,7 +13,7 @@ function getAdminClient() {
   )
 }
 
-export async function signUp(formData: FormData): Promise<{ error: string } | { needsConfirmation: true } | undefined> {
+export async function signUp(formData: FormData): Promise<{ error?: string; needsConfirmation?: boolean } | void> {
   const email = formData.get("email") as string
   const password = formData.get("password") as string
   const display_name = formData.get("display_name") as string
@@ -43,7 +43,7 @@ export async function signUp(formData: FormData): Promise<{ error: string } | { 
   redirect("/dashboard")
 }
 
-export async function signIn(formData: FormData) {
+export async function signIn(formData: FormData): Promise<{ error?: string } | void> {
   const supabase = await createClient()
 
   const data = {
