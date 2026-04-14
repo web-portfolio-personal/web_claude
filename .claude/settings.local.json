@@ -6,7 +6,17 @@
       "mcp__f1b4ac22-fad4-4e43-ad5b-f09a39f12061__list_tables",
       "mcp__f1b4ac22-fad4-4e43-ad5b-f09a39f12061__get_project_url",
       "mcp__f1b4ac22-fad4-4e43-ad5b-f09a39f12061__get_publishable_keys",
-      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --yes)"
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --yes)",
+      "mcp__f1b4ac22-fad4-4e43-ad5b-f09a39f12061__apply_migration",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Bash(mkdir -p /c/Users/mokiu/Claude/logs/sessions)",
+      "Bash(cat)",
+      "Bash(npx web-push:*)",
+      "mcp__Claude_Preview__preview_start",
+      "mcp__f1b4ac22-fad4-4e43-ad5b-f09a39f12061__get_logs",
+      "mcp__f1b4ac22-fad4-4e43-ad5b-f09a39f12061__execute_sql",
+      "Bash(gh repo:*)"
     ]
   }
 }
